@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=cv, initial-scale=1.0">
+    <title>CV with flex</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    border:none;
+    margin: 0px;
+    padding:0px;
+    text-decoration: none;
+    outline: none;
+ }
+ div#body{
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size: 16px;
+     height:1400px;
+     display: flex;
+     flex-direction: row; /*row| row-reverse */
+     justify-content: space-between;
+     align-items:flex-start;
+ }
+ div#wrapper{
+     width:100%;
+     max-width: 800px;
+     height:1085px;
+     margin:auto;
+     border:solid thin;
+     border-style: none;
+ }
+ div#header{
+     background-color: rgb(109, 155, 211);
+     height:160px;
+     padding-top:3px;
+     padding-bottom:3px;
+     display:flex;
+     justify-content: space-between;
+     align-items:flex-start;
+ }
+ div#header h1{
+     color:rgb(190, 44, 12);
+     text-align: center;
+     padding-top: 10px;
+     font-size:40px;
+ }
+ div#header h3{
+     color:rgb(56, 44, 40);
+     text-align: center;
+     padding-top: 10px;
+     font-size:22px;
+ }
+ div#header p{
+     color:rgb(56, 44, 40);
+     text-align: center;
+     padding-top: 10px;
+     padding-top: 20px;
+     font-size:15px;
+ }
+ div#header img{
+     width: 15px;
+     height: 15px;
+ }
+ div#info{
+     width:950px;
+     flex-direction: row;
+     justify-content: space-around; /* space-between| space-evenly */
+     align-items:flex-end;
+ }
+ div#foto{
+     width:300px;
+     display:flex;
+     flex-direction: row; /*row| row-reverse */
+     justify-content: space-between; /* space-between| space-evenly */
+     align-items:flex-start;
+ }
+ div#foto img{
+     width: 150px;
+     height:150px;
+     padding-left: 25px;
+     padding-top: 4px;
+     /*border-radius: 10px 10px 10px 10px;*/
+ }
+ div#personal{
+     width:280px;
+     height:925px;
+     background-color: bisque;
+     padding-top: 6px;
+     padding-bottom: 6px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between; /* space-between| space-evenly */
+     align-items:flex-start;
+ }
+ div#personal ul{
+    font-weight: normal;
+    padding-left: 27px;
+ }
+ div#edu-skills{
+     width:520px;
+     height:925px;
+     background-color: mintcream;
+     padding-top: 6px;
+     padding-bottom: 6px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between; /* space-between| space-evenly */
+     align-items:flex-start;
+ }
+ div#edu-skills ul{
+    font-weight: normal;
+    padding-left: 27px;
+ }
+ div#headline {
+     height:40px;
+     width: 280px;
+     background-color: rgb(173, 155, 134);
+     padding-left: 17px;
+     padding-top: 8px;
+ }
+ div#headline2 {
+     height:40px;
+     width: 520px;
+     background-color: rgb(0, 144, 72);
+     padding-left: 17px;
+     padding-top: 8px;
+ }
+ #p01{
+     font-size:20px;
+     color:white;
+ }
+ #p02{
+     font-size:18px;
+ }
+ #p03{
+     font-size:18px;
+     font-weight: normal;
+ }
+ #p04{
+     font-size:15px;
+     font-weight: normal;
+ }
+ .questionNumberIcon {
+     display:inline-block;
+     width:15px;
+     height:15px;
+     border-radius:23px;
+     font-size:18px;
+     color:#000;
+     line-height:45px;
+     text-align:center;
+     background:#fff;
+     border:2px solid black;
+ }
+.questionNumberIcon1 {
+    display:inline-block;
+    width:15px;
+    height:15px;
+    border-radius:23px;
+    font-size:18px;
+    color:rgb(200, 87, 6);
+    line-height:45px;
+    text-align:center;
+    background:rgb(195, 85, 6);
+    border:2px solid black;
+    padding-left: 2px;
+ }
+ span{
+   font-weight: normal;
+}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="foto">
+                <img src="images/ddd.jpg">
+            </div>
+            <div id="info">
+                <h1>NIKOLAOS VOUTSINAS</h1>
+                <h3>WEB DEVELOPER & WEB DESIGNER</h3>
+                <p><span><img src="images/address.png"> </span> Vironas, Athens, 16233  <span> <img src="images/phone.jpg"> </span>+30 6909272562  <span> <img src="images/email.png"> </span>  nickvoutsinas@yahoo.gr <span> <br><img src="images/in.png"></span>  NIKOLAOS VOUTSINAS</p>
+            </div>
+        </div>
+        <div id="body">
+            <div id="personal">
+                <div id="headline"><p id="p01">PERSONAL</p></div>
+                    
+                    <ul>
+                        <li><p id="p03">DATE OF BIRTH</p></li><p id="p04">27 Jan 1991</p>
+                        <li><p id="p03">PLACE OF BIRTH</p><p id="p04">Athens, Greece</p></li>
+                        <li><p id="p03">MARITAL STATUS</p><p id="p04">Single</p></li>
+                        <li><p id="p03">DRIVING LICENSE</p><p id="p04">B</p></li>
+                    </ul>
+                    <div id="headline"><p id="p01">SPEAKING LANGUAGES</p></div>
+                    <ul>
+                        <li><p id="p03">GREEK (Native)</p></li>
+                        <li><p id="p03">ENGLISH (Proficiency)</p></li>
+                        <li><p id="p03">ITALIAN (B1)</p></li>
+                        <li><p id="p03">TURKISH (B1)</p></li>
+                    </ul>
+                    <div id="headline"><p id="p01">PROGRAMMING SKILLS</p></div>
+                    <ul>
+                        <li><p id="p03">HTML </b><br> <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon"></div></li>
+                        <li><p id="p03">CSS</b><br> <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon"></div></li>
+                        <li><p id="p03">JavaScript</b><br> <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon"></div></li>
+                        <li><p id="p03">ReactJS</b><br> <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon"></div>
+                            <div class="questionNumberIcon"></div></li>
+                        <li><p id="p03">PHP</b><br> <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon"></div></li>
+                        <li><p id="p03">MySQL</b><br> <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon"></div></li>
+                        <li><p id="p03">JAVA</b><br> <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon"></div>
+                            <div class="questionNumberIcon"></div>
+                            <div class="questionNumberIcon"></div></li>
+                    </ul>
+                    <div id="headline"><p id="p01">GRAPHIC SKILLS</p></div>
+                    <ul>
+                        <li><p id="p03">Adobe Photoshop</b><br> <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon"></div>
+                            <div class="questionNumberIcon"></div></li>
+                        <li><p id="p03">Adobe Illustrator</b><br><div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon"></div>
+                            <div class="questionNumberIcon"></div>
+                        </li>
+                    </ul>
+                    <div id="headline"><p id="p01">SOURCE CONTROL SKILLS</p></div>
+                    <ul>
+                        <li><p id="p03">Git </b><br> <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon1"></div>
+                            <div class="questionNumberIcon"></div>
+                            <div class="questionNumberIcon"></div>
+                        </li>
+                    </ul>
+            </div>
+            <div id="edu-skills">
+                    <div id="headline2"><p id="p01">SUMMARY</p></div>
+                    <p style="font-size:18px; padding-left:20px">I am a military officer looking for a career shift towards web development.
+                    I am also a passionate professional, seeking for new opportunities and really eager to 
+                    learn new technologies.</p>
+                    <div id="headline2"><p id="p01">WORK EXPERIENCE</p></div>
+                    <ul>
+                        <li><p id="p03">Software Engineer in Greek Army</p></li>
+                        <p>Aug 2022-present</p><br>
+                        <li><p id="p03">Army Officer</p></li>
+                        <p>Jul 2013-present</p><br>
+                    </ul>
+                    <div id="headline2"><p id="p01">EDUCATION</p></div>
+                    <ul>
+                        <li><p id="p03">Front-End Development Professional Certification</p></li>
+                        <p>Jan 2023-Jun 2023</p><br>
+                        <li><p id="p03">IEK Intergraphics Web Development and Web Design</p></li>
+                        <p>Oct 2022-Jun 2023</p><br>
+                        <li><p id="p03">Military Coding School</p></li>
+                        <p style="font-weight:normal">Jan 2021-Jul 2021</p><br>
+                        <li><p id="p03">MSc in Public Administration with a grade of 7.7/10</p></li>
+                        <p>Oct 2020-Feb 2022</p><br>
+                        <li><p id="p03">Military Academy</p></li>
+                        <p>Sep 2009-Jul 2013</p><br>
+                        <li><p id="p03">University of Piraeus (Business Administration)</p></li>
+                        <p>Oct 2008-Jun 2009</p><br>
+                        <li><p id="p03">High School Diploma with a grade of 18.6/20</p></li>
+                        <p>Sep 2005-Jun 2008</p>                              
+                    </ul>  
+                    <div id="headline2"><p id="p01">INTERESTS</p></div>
+                    <ul>
+                        <li><p id="p03">Travelling</p></li><br>
+                        <li><p id="p03">Sports</b></p><br>
+                        <li><p id="p03">Movies</b></p>
+                    </ul> 
+                    <div id="headline2"><p id="p01">REFERENCES</p></div>
+                    <p style="font-size:18px; padding-left:20px;">Available upon request</p> 
+        </div>
+    </div>
+</body>
+</html>
